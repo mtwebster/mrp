@@ -748,6 +748,11 @@
                                 string="Compute Data" type="object"
                                 icon="terp-stock_format-scientific"
                                 colspan="2" />
+                            <button name="action_recompute" states="ready,in_production"
+                                string="Recalculate" type="object"
+                                icon="terp-stock_format-scientific"
+                                colspan="2" />
+
                             <field colspan="4" name="workcenter_lines" nolabel="1">
                                 <form string="Production Work Centers">
                                     <field colspan="4" name="name"/>
