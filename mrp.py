@@ -610,6 +610,8 @@ class mrp_production(osv.osv):
                 prod_line_obj.create(cr, uid, line)
             for line in results2:
                 line['production_id'] = production.id
+                line['order_name'] = production.x_order_name
+                line['order_due'] = production.x_order_due
                 workcenter_line_obj.create(cr, uid, line)
         return len(results)
 
