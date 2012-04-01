@@ -419,7 +419,7 @@ class mrp_production(osv.osv):
         """
         result = {}
         for prod in self.browse(cr, uid, ids, context=context):
-            result[prod.id] = prod.date_planned
+            result[prod.id] = prod.x_order_due
         return result
 
     def _production_date(self, cr, uid, ids, prop, unknow_none, context=None):
