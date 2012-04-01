@@ -832,6 +832,7 @@ class mrp_production(osv.osv):
         """
         @return: True or False
         """
+        return True
         res = True
         for production in self.browse(cr, uid, ids):
             if not production.product_lines:
@@ -981,7 +982,6 @@ class mrp_production(osv.osv):
         shipment_id = False
         wf_service = netsvc.LocalService("workflow")
         uncompute_ids = filter(lambda x:x, [not x.product_lines and x.id or False for x in self.browse(cr, uid, ids, context=context)])
-        self.action_compute(cr, uid, uncompute_ids, context=context)
         for production in self.browse(cr, uid, ids, context=context):
             shipment_id = self._make_production_internal_shipment(cr, uid, production, context=context)
             produce_move_id = self._make_production_produce_line(cr, uid, production, context=context)

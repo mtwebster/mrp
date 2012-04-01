@@ -745,10 +745,10 @@
                         </page>
                         <page string="Work Orders" groups="base.group_extended">
                             <button name="action_compute" states="draft"
-                                string="Compute Data" type="object"
+                                string="Pull initial routing information - Overwrites current routing" type="object"
                                 icon="terp-stock_format-scientific"
                                 colspan="2" />
-                            <button name="action_recompute" states="ready,in_production"
+                            <button name="action_recompute" states="draft,ready,in_production"
                                 string="Recalculate" type="object"
                                 icon="terp-stock_format-scientific"
                                 colspan="2" />
